@@ -1,0 +1,6 @@
+python train.py --train-file "path/91-image_x2.h5"  --eval-file "path/Set5_x2.h5"  --outputs-dir "path/outputs"  --scale 2  --lr 1e-4  --batch-size 16  --num-epochs 400  --num-workers 8  --seed 123   
+python train.py --train-file "traindata/91-image_x2.h5"  --eval-file "testdata/Set5_x2.h5"  --outputs-dir "outputs"  --scale 2  --lr 1e-4  --batch-size 16  --num-epochs 400  --num-workers 8  --seed 123   
+
+python test.py --weights-file "BLAH_BLAH/srcnn_x3.pth" --image-file "data/butterfly_GT.bmp" --scale 2
+python test.py --weights-file "outputs/x2/epoch_41.pth" --image-file "testdata/SampleData/bnw.png" --scale 2
+python test.py --weights-file "outputs/x2/srcnn_x2.pth" --image-file "testdata/SampleData/bnw.png" --scale 2
